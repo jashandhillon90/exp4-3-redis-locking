@@ -1,4 +1,4 @@
-## Experiment 43
+## Redis Locking Mechanism
 
 This project includes a Node.js service and a load test configuration.
 
