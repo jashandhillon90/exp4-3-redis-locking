@@ -4,7 +4,7 @@
 let seats = {
     "1": "available",
     "2": "available",
-    "A1": "available", // 👈 Bas ye line add kar dijiye!
+    "A1": "available", //  add kar dijiye!
     "A2": "available",
     "A3": "available"
 };

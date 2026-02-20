@@ -1,17 +1,19 @@
 import { createClient } from 'redis';
 
-// Create a Redis client instance
-const redisClient = createClient();
-
-// Handle Redis connection errors
-redisClient.on('error', (err) => {
-    console.error('Redis Error:', err);
+// Cloud par 'REDIS_URL' uthayega, local par 'localhost'
+const redisClient = createClient({
+    url: process.env.REDIS_URL || 'redis://localhost:6379'
 });
 
-// Function to connect to Redis
+redisClient.on('error', (err) => console.error('Redis Error:', err));
+
 const connectRedis = async () => {
-    await redisClient.connect();
-    console.log('✅ Redis Connected');
+    try {
+        await redisClient.connect();
+        console.log('✅ Redis Connected');
+    } catch (err) {
+        console.error('❌ Redis Connection Failed:', err);
+    }
 };
 
 export { redisClient, connectRedis };
