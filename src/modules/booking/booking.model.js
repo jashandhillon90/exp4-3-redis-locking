@@ -4,9 +4,9 @@
 let seats = {
     "1": "available",
     "2": "available",
-    "3": "available",
-    "4": "available",
-    "5": "available"
+    "A1": "available", // 👈 Bas ye line add kar dijiye!
+    "A2": "available",
+    "A3": "available"
 };
 
 // Function to get the status of a seat by its ID. It returns the current status of the seat (available or booked).
