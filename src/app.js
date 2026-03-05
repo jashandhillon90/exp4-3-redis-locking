@@ -5,10 +5,12 @@ const app = express();
 
 app.use(express.json());
 
+/* ROOT ROUTE */
 app.get("/", (req, res) => {
-  res.send("Exp4.3 Redis Locking API Running Successfully 🚀");
+  res.send("Exp4.3 Redis Locking API Running 🚀");
 });
 
+/* API ROUTES */
 app.use("/api", bookingRoutes);
 
 export default app;
